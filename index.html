@@ -31,12 +31,12 @@
         </div>  
       </header>
 
-      <section class="words-container">
-        <form name="myForm" novalidate ng-submit="submit()">
+      <section class="words-container" ng-show="input">
+        <form name="myForm" novalidate ng-submit="submit();">
           <h3>Provide the Following Words:</h3>
           <ul class="words-select group">
             <li>
-              <input placeholder="Celebrity" name="celebrity" ng-model="celebrity" type="text" required>
+              <input placeholder="Male Celebrity" name="celebrity" ng-model="celebrity" type="text" required>
               <div ng-if="myForm.$submitted" ng-messages="myForm.celebrity.$error">
                 <span class="error" ng-message="required">Field is Required!</span>
               </div>
@@ -99,10 +99,15 @@
 
       </section> 
 
-      <section class="output-container">
-        <p>Well <span>{{celebrity}}</span> settled down in the Valley and hung his wild years on a nail that he drove through his wife's <span>{{noun}}</span>. <span>{{celebrity}}</span> sold used <span>{{objects}}</span> out there on San Fernando Road and assumed a $30,000 loan at 15 and 1/4% and put a down payment on a little 2 bedroom place. The wife was a <span>{{adjective}}</span> type of <span>{{noun2}}</span>, made a good <span>{{beverage}}</span>, had a little Chihuahua named <span>{{dogname}}</span> that had some kind of skin disease and was totally blind. They had a thoroughly modern kitchen, self-cleaning oven, the whole bit. <span>{{celebrity}}</span> drove a little sedan. They were so happy.</p>
+      <section class="output-container" ng-hide="output">
+        <div class="output">
+          <p>Well <span>{{celebrity}}</span> settled down in the Valley and hung his wild years on a nail that he drove through his wife's <span>{{noun}}</span>. <span>{{celebrity}}</span> sold used <span>{{objects}}</span> out there on San Fernando Road and assumed a $30,000 loan at 15 and 1/4% and put a down payment on a little 2 bedroom place. The wife was a <span>{{adjective}}</span> type of <span>{{noun2}}</span>, made a good <span>{{beverage}}</span>, had a little Chihuahua named <span>{{dogname}}</span> that had some kind of skin disease and was totally blind. They had a thoroughly modern kitchen, self-cleaning oven, the whole bit. <span>{{celebrity}}</span> drove a little sedan. They were so happy.</p>
 
-        <p>One night <span>{{celebrity}}</span> was on his way home from work, stopped at the <span>{{place}}</span>, picked up a couple of <span>{{beverage}}</span>. Drank 'em in the car on his way to the Shell station. Then he got a gallon of <span>{{liquid}}</span> in a can, drove home, doused everything in the house, torched it. Parked across the street, laughing, watching it burn. All Halloween orange and chimney red. Then <span>{{celebrity}}</span> put on the top 40 station, got on the Hollywood Freeway headed north. Never could stand that dog.</p>
+          <p>One night <span>{{celebrity}}</span> was on his way home from work, stopped at the <span>{{place}}</span>, picked up a couple of <span>{{beverage}}</span>. Drank 'em in the car on his way to the Shell station. Then he got a gallon of <span>{{liquid}}</span> in a can, drove home, doused everything in the house, torched it. Parked across the street, laughing, watching it burn. All Halloween orange and chimney red. Then <span>{{celebrity}}</span> put on the top 40 station, got on the Hollywood Freeway headed north. Never could stand that dog.</p>
+        </div>
+        <div class="submit-container">
+          <input type="submit" ng-click="resetForm()" value="Start Over"/>
+        </div>
       </section>
     </div>
   </body>
