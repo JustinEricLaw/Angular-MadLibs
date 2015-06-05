@@ -1,6 +1,11 @@
 angular.module('myApp', ['ngMessages'])
   .controller('myController', function($scope){
 
+    // Set Initial Display of App
+    $scope.input = true;
+    $scope.output = true;
+
+
     // If Form is Valid, Hide Input & Show Output
     $scope.submit = function() {
       if($scope.myForm.$valid) {
@@ -11,10 +16,6 @@ angular.module('myApp', ['ngMessages'])
         console.log('The form is invalid');
       }
     };
-
-    // Set Initial Display of App
-    $scope.input = true;
-    $scope.output = true;
 
 
     $scope.resetForm = function() {
