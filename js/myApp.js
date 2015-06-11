@@ -1,9 +1,9 @@
-angular.module('myApp', ['ngMessages'])
-  .controller('myController', function($scope){
+angular.module('myApp', ['ngAnimate'])
+  .controller('myController', ['$scope', function($scope){
 
     // Set Initial Display of App
     $scope.input = true;
-    $scope.output = true;
+    $scope.output = false;
 
 
     // If Form is Valid, Hide Input & Show Output
@@ -11,7 +11,7 @@ angular.module('myApp', ['ngMessages'])
       if($scope.myForm.$valid) {
         console.log('The form is valid');
         $scope.input = false;
-        $scope.output = false;
+        $scope.output = true;
       } else {
         console.log('The form is invalid');
       }
@@ -21,7 +21,7 @@ angular.module('myApp', ['ngMessages'])
     $scope.resetForm = function() {
       // Reset to Initial Display
       $scope.input = true;
-      $scope.output = true;
+      $scope.output = false;
 
       // Reset Form to Unsubmitted State
       $scope.myForm.$setPristine();
@@ -38,4 +38,4 @@ angular.module('myApp', ['ngMessages'])
       $scope.liquid = '';
     };
 
-});
+}]);

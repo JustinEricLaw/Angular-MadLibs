@@ -37,57 +37,39 @@
           <ul class="words-select group">
             <li>
               <input placeholder="Male Celebrity" name="celebrity" ng-model="celebrity" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.celebrity.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.celebrity.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Noun" name="noun" ng-model="noun" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.noun.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.noun.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Objects" name="objects" ng-model="objects" type="text" required>
-                <div ng-if="myForm.$submitted" ng-messages="myForm.objects.$error">
-                  <span class="error" ng-message="required">Field is Required!</span>
-                </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.objects.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Adjective" name="adjective" ng-model="adjective" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.adjective.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.adjective.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Noun 2" name="noun2" ng-model="noun2" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.noun2.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.noun2.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Type of Beverage" name="beverage" ng-model="beverage" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.beverage.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.beverage.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Name" name="dogname" ng-model="dogname" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.dogname.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.dogname.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Place" name="place" ng-model="place" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.place.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.place.$error.required">Field is Required!</span>
             </li>
             <li>
               <input placeholder="Type of Liquid" name="liquid" ng-model="liquid" type="text" required>
-              <div ng-if="myForm.$submitted" ng-messages="myForm.liquid.$error">
-                <span class="error" ng-message="required">Field is Required!</span>
-              </div>
+              <span class="error" ng-if="myForm.$submitted && myForm.liquid.$error.required">Field is Required!</span>
             </li>
           </ul>
 
@@ -99,7 +81,7 @@
 
       </section> 
 
-      <section class="output-container" ng-hide="output">
+      <section class="output-container" ng-show="output">
         <div class="output">
           <p>Well <span>{{celebrity}}</span> settled down in the Valley and hung his wild years on a nail that he drove through his wife's <span>{{noun}}</span>. <span>{{celebrity}}</span> sold used <span>{{objects}}</span> out there on San Fernando Road and assumed a $30,000 loan at 15 and 1/4% and put a down payment on a little 2 bedroom place. The wife was a <span>{{adjective}}</span> type of <span>{{noun2}}</span>, made a good <span>{{beverage}}</span>, had a little Chihuahua named <span>{{dogname}}</span> that had some kind of skin disease and was totally blind. They had a thoroughly modern kitchen, self-cleaning oven, the whole bit. <span>{{celebrity}}</span> drove a little sedan. They were so happy.</p>
 
