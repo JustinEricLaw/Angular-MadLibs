@@ -1,0 +1,19 @@
+.input-animate.ng-hide-add.ng-hide-add-active,
+.input-animate.ng-hide-remove.ng-hide-remove-active {
+  
+}
+
+.input-animate.ng-hide {
+  @include bounceOutLeft;
+  animation-duration: .25s;
+}
+
+.output-animate.ng-hide-add.ng-hide-add-active,
+.output-animate.ng-hide-remove.ng-hide-remove-active {
+  @include bounceInRight;
+  animation-delay: .5s;
+}
+
+.output-animate.ng-hide {
+  display: none;
+}

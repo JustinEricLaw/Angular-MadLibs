@@ -39,6 +39,11 @@ header {
   padding: 3em 1.5em;
   border-top: 1px solid #ccc;
 }
+.words-container {
+  @include bp(lg) {
+    min-height: 30em;
+  }
+}
 
 h3 {
   padding-bottom: .75em;
